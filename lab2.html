@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
-    <head>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <h1>
-            Questionário de preferências musicais e doação de sangue
-        </h1>
-        <form action="/action_page.php">
-            <p>
-                <form action="/action_page.php">
-                First name:<br>
-                <input type="text" name="firstname" value="João"><br>
-            </p>
-            <p>
-                <form action="/action_page.php">
-                Last name:<br>
-                <input type="text" name="firstname" value="Rafael"><br><br>
-            </p>
-            <p>
-                <input type="radio" name="gender" value="male" checked> Male<br>
-                <input type="radio" name="gender" value="female" checked> Female<br>
-                <input type="radio" name="gender" value="other" checked> Other<br>
-            </p>
-            <select name="cars">
-                <option value="volvo">
-                    Volvo
-                </option>
-                <option value="saab" selected>
-                    Saab
-                </option>
-                <option value="fiat">
-                    Fiat
-                </option>
-            </select><br>
-        <form action="/action_page.php">
-            <textarea name="message" rows="10" cools="30">
-                Hello darkness my old friend.
-            </textarea>
-            <input type="submit">
-        </form>
-        </form>
-            <button type="button" onclick="alert('Hello World!')">Click me</button>
-    </body>
+<head>
+    <meta charset="UTF-8"> 
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>
+        Questionário sobre o tipo sanguíneo
+    </h1>
+    <form>
+        <p>
+            Nome: <input type="text" id="Nome" name="Nome">
+        </p>
+        <p>
+            Data de nascimento: <input type="date" id="nascimento" name="nascimento">
+        </p>
+        <p>
+            Email: <input type="email" id="email" name="email">
+        </p>
+        <p>
+            Foto: <input type="file" id="foto" name="foto">
+        </p>
+        <p>
+            Gênero:
+            <select id="genero" name="genero">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outros" selected>Outros</option>
+            </select>
+        </p>
+        <p>
+            Tipo sanguíneo:<br>
+            <label><input type="radio" name="tiposangue" value="A">A</label>
+            <label><input type="radio" name="tiposangue" value="B">B</label>
+            <label><input type="radio" name="tiposangue" value="AB">AB</label>
+            <label><input type="radio" name="tiposangue" value="O">O</label><br>
+            <label><input type="radio" name="rhsangue" value="+">+</label>
+            <label><input type="radio" name="rhsangue" value="-">-</label>
+        </p>
+        <p>
+            Doenças:<br>
+            <label><input type="checkbox" name="doencas" value="herpes">Herpes</label>
+            <label><input type="checkbox" name="doencas" value="cancro">Cancro</label>
+            <label><input type="checkbox" name="doencas" value="pneumonia">Pneumonia</label>
+            <label><input type="checkbox" name="doencas" value="gripe">Gripe</label>
+        </p>
+        <p>
+            <texrea id="biografia" name="biografia" rows="5" cols="10">Digite aqui</texrea>
+        </p>
+        <button type="button" onclick="alert('Olá')">Clique aqui</button>
+    </form>
+</body>
 </html>

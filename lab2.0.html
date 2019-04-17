@@ -1,45 +1,109 @@
 <!DOCTYPE html>
-<html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<option value="masculino">Masculino</option>
-<option value="feminino">Feminino</option>
-<option value="helicoptero">Apache helicopter</option>
-<option value="pokemongo">Jogador de Pokémon Go</option>
-<option value="outros">Não binário</option>
-</selecte></p>
-<p>
-    Tipo sanguíneo: <br>
-    <label><input type="radio" name="tiposangue" value="O">O</label>
-    <label><input type="radio" name="tiposangue" value="A">A</label>
-    <label><input type="radio" name="tiposangue" value="B">B</label>
-    <label><input type="radio" name="tiposangue" value="AB">AB</label>
-    <br>
-    <label><input type="radio" name="rhsangue" value="+"></label>
-    <label><input type="radio" name="rhsangue" value="-"></label>
-</p>
-<p>
-    Doenças:<br>
-    <label><input type="checkbox" name="doencas" value="herpes">Herpes</label>
-    <label><input type="checkbox" name="doencas" value="herpes">Herpes</label>
-    <label><input type="checkbox" name="doencas" value="herpes">Herpes</label>
-    <label><input type="checkbox" name="doencas" value="herpes">Herpes</label>
-    <label><input type="checkbox" name="doencas" value="herpes">Herpes</label>
-</p>
-</html>https://proxy.ufu.br:3128
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8"> 
+    <style>
+        .title{
+            font-style:normal;
+            font-size:40px;
+            font-family:times;
+            text-align: center;
+        }
+        .subtitle{
+            font-style:normal;
+            font-size:25px;
+            font-family:times;
+        }
+        .text{
+            font-style:normal;
+            font-size:20px;
+            font-family:times;
+        }
+        .button{
+            text-align:center; 
+        }
+        .image1{
+            width:100px;
+            height:100px;
+            float:right;
+        }
+        .image2{
+            width:100px;
+            height:100px;
+            float:left;
+        }
+        .image3{
+            width:30px;
+            height:30px;
+            float:left;
+        }
+    </style>
+</head>
+<body style="background-color:silver" >
+            <img class="image1" src="https://pngimage.net/wp-content/uploads/2018/06/gota-sangue-png-2.png"><br>
+            <img class="image2" src="https://pngimage.net/wp-content/uploads/2018/06/gota-sangue-png-2.png"><br>
+    <h1 class="title">
+        Questionário sobre o tipo sanguíneo
+    </h1>
+    <form class="subtitle">
+            <img class="image3" src="https://pngimage.net/wp-content/uploads/2018/06/gota-sangue-png-2.png">
+        <p><b>
+            Nome: <input class="text" type="text" id="Nome" name="Nome">
+        </b></p>
+            <img class="image3" src="https://pngimage.net/wp-content/uploads/2018/06/gota-sangue-png-2.png">
+        <p><b>
+            Data de nascimento: <input class="text" type="date" id="nascimento" name="nascimento">
+        </b></p>
+            <img class="image3" src="https://pngimage.net/wp-content/uploads/2018/06/gota-sangue-png-2.png">
+        <p><b>
+            Email: <input class="text" type="email" id="email" name="email">
+        </b></p>
+            <img class="image3" src="https://pngimage.net/wp-content/uploads/2018/06/gota-sangue-png-2.png">
+        <p><b>
+            Telefone: <input class="text" type="tel" id="tel" name="telefone" pattern="[0-9]{5}-[0-9]{4}">
+        </b></p>
+            <img class="image3" src="https://pngimage.net/wp-content/uploads/2018/06/gota-sangue-png-2.png">
+        <p><b>
+            Foto: <input class="text" type="file" id="foto" name="foto" accept="image/png, image/jpg">
+        </b></p>
+            <img class="image3" src="https://pngimage.net/wp-content/uploads/2018/06/gota-sangue-png-2.png">
+        <p><b>
+            Gênero:
+            <select class="text" id="genero" name="genero">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro" selected>Outro</option>
+            </select>
+        </b></p>
+            <img class="image3" src="https://pngimage.net/wp-content/uploads/2018/06/gota-sangue-png-2.png">
+        <p><b>
+            Tipo sanguíneo:</b>
+            <select class="text" id="tipo sanguineo" name="tipo sanguineo">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="AB">AB</option>
+                <option selected value="O">O</option>
+            </select> 
+        <b>Fator RH</b>
+            <select class="text" id="fator rh" name="fator rh">
+                <option value="+">+</option>
+                <option value="-">-</option>
+            </select>
+        </p>
+                <img class="image3" src="https://pngimage.net/wp-content/uploads/2018/06/gota-sangue-png-2.png">
+        <p><b>
+            Doenças:<br></b>
+            <label class="text" ><input type="checkbox" name="doencas" value="herpes">Herpes</label>
+            <label class="text" ><input type="checkbox" name="doencas" value="cancro">Cancro</label>
+            <label class="text" ><input type="checkbox" name="doencas" value="pneumonia">Pneumonia</label>
+            <label class="text" ><input type="checkbox" name="doencas" value="gripe">Gripe</label>
+            <label class="text" ><input type="checkbox" name="doencas" value="nenhuma">Nenhuma</label>
+        </p>
+        <p class="button"><button class="text" type="button" onclick="alert('Seu formulário foi enviado com sucesso')">Enviar</button></p>
+    </form>
+</body>
+<footer>
+        <img class="image1" src="https://pngimage.net/wp-content/uploads/2018/06/gota-sangue-png-2.png">
+        <img class="image2" src="https://pngimage.net/wp-content/uploads/2018/06/gota-sangue-png-2.png">
+</footer>
+</html>
