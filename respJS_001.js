@@ -22,12 +22,12 @@ function Q3() {
     var aux = document.getElementById('profissoes');
     var profissao = aux.options[aux.selectedIndex].text;
     // Segue aqui seu código
-    if(profissao == 'Professor' || profissao == 'Ator')
+    if(profissao.endsWith('or'))
     {
         console.log('Profissão: ' + profissao);
         console.log('Substantivo Masculino')
     }
-    else if(profissao == 'Atriz')
+    else if(profissao.endsWith('iz'))
     {
         console.log('Profissão: ' + profissao);
         console.log('Substantivo Feminino')
@@ -63,19 +63,19 @@ function Q4() {
         console.log('M = ' + m_str);
     }
     else {
-        console.log('Cateto oposto (m) = ' + Math.sqrt (Math.pow(o_str,2) - Math.pow(n_str,2)));
+        console.log('M = ' + Math.sqrt (Math.pow(o_str,2) - Math.pow(n_str,2)));
     }
     if (n_str){
         console.log('N = ' + n_str);
     }
     else {
-        console.log('Cateto adjacente (n) = ' + Math.sqrt (Math.pow(o_str,2) - Math.pow(m_str,2)));
+        console.log('N = ' + Math.sqrt (Math.pow(o_str,2) - Math.pow(m_str,2)));
     }
     if (o_str) {
         console.log('O = ' + o_str);
     }
     else {
-        console.log('Hipotenusa (o) = ' + Math.sqrt (Math.pow(m_str,2) + Math.pow(n_str,2)));
+        console.log('O = ' + Math.sqrt (Math.pow(m_str,2) + Math.pow(n_str,2)));
     }
 }
 function Q5() {
