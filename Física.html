@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <script src="Física.js"></script>
+    </head>
+    <body>
+<!----------------------------------------------------------------------------------------------->       
+        <h2>Movimento retilíneo uniforme</h2>
+            <p>Posição inicial (s): <input type="text" id='s'></p>
+            <p>Velocidade(v): <input type="text" id='v'></p>
+            <p>Tempo (t): <input type="text" id='t'></p>
+            <p>Posição final (S): <input type="text" id='S'></p>
+                <p><button type="button" onclick="MRU()">Resposta</button></p>
+                <p id="MRU">Resposta</p>
+<!-----------------------------------------------------------------------------------------------> 
+        <h2>Movimento retilíneo uniformemente variado</h2>
+            <p>Posição inicial (s): <input type="text" id='a'></p>
+            <p>Velocidade(v): <input type="text" id='b'></p>
+            <p>Tempo (t): <input type="text" id='c'></p>
+            <p>Aceleração (a): <input type="text" id='d'></p>
+            <p>Posição final (S): <input type="text" id='E'></p>
+                <p><button type="button" onclick="MRUV()">Resposta</button></p>
+                <p id="MRUV">Resposta</p>
+
+        <h2>Movimento Retilíneo Uniformemente Variado - 2</h2>
+            <p>Velocidade incial (v): <input type="text" id='f'></p>
+            <p>Aceleração (a): <input type="text" id='g'></p>
+            <p>Tempo (t): <input type="text" id='h'></p>
+            <p>Velocidade final (V): <input type="text" id='I'></p>
+                <p><button type="button" onclick="MRUVV()">Resposta</button></p>
+                <p id="MRUVV">Resposta</p>
+
+        <h2>Movimento Retilíneo Uniformemente Variado - 3</h2>
+            <p>Velocidade incial (v): <input type="text" id='j'></p>
+            <p>Aceleração (a): <input type="text" id='k'></p>
+            <p>Distância percorrida (∆s): <input type="text" id='l'></p></p>
+            <p>Velocidade final (V): <input type="text" id='M'></p>
+                <p><button type="button" onclick="MRUVVV()">Resposta</button></p>
+                <p id="MRUVVV">Resposta</p>
+<!-----------------------------------------------------------------------------------------------> 
+        <h2>Movimento Circular Uniforme</h2>
+            <p>Velocidade angular (ω): <input type="text" id='n'></p>
+            <p>Raio (r): <input type="text" id='o'></p></p>
+            <p>Velocidade (V): <input type="text" id='P'></p>
+                <p><button type="button" onclick="MCU()">Resposta</button></p>
+                <p id="MCU">Resposta</p>
+
+        <h2>Movimento Circular Uniforme - 2</h2>
+            <p>Frequência (f): <input type="text" id='q'></p></p>
+            <p>Velocidade angular (ω): <input type="text" id='R'></p>
+                <p><button type="button" onclick="MCUU()">Resposta</button></p>
+                <p id="MCUU">Resposta</p>
+
+        <h2>Movimento Circular Uniforme - 3</h2>
+            <p>Frequência (f): <input type="text" id='u'></p></p>
+            <p>Período (T): <input type="text" id='V'></p>
+                <p><button type="button" onclick="MCUUU()">Resposta</button></p>
+                <p id="MCUUU">Resposta</p>
+
+        <h2>Movimento Circular Uniforme - 4</h2>
+            <p>Velocidade (v): <input type="text" id='w'></p>
+            <p>Raio (r): <input type="text" id='x'></p>
+            <p>Aceleração centrípeta (a): <input type="text" id='Y'></p></p>
+                <p><button type="button" onclick="MCUUUU()">Resposta</button></p>
+                <p id="MCUUUU">Resposta</p>
+
+        <h2>Movimento Circular Uniforme - 5</h2>
+            <p>Velocidade inicial (v): <input type="text" id='exa_str'></p>
+            <p>Ângulo da direção do lançamento (θ): <input type="text" id='exc_str'></p>
+            <p>Velocidade no eixo x (V): <input type="text" id='exb_str'></p></p>
+                <p><button type="button" onclick="EX11()">Resposta</button></p>
+                <p id="EX11">Resposta</p>      
+                
+        <h2>Movimento Circular Uniforme - 6</h2>
+            <p>Velocidade inicial (v): <input type="text" id='exd_str'></p>
+            <p>Ângulo da direção do lançamento (θ): <input type="text" id='exf_str'></p>
+            <p>Velocidade no eixo y (V): <input type="text" id='exe_str'></p></p>
+                <p><button type="button" onclick="EX22()">Resposta</button></p>
+                <p id="EX22">Resposta</p> 
+
+        <h2>Movimento Circular Uniforme - 7</h2>
+            <p>Velocidade inicial no eixo y (v): <input type="text" id='exg_str'></p>
+            <p>Aceleração (a): <input type="text" id='exh_str'></p>
+            <p>Tempo (t): <input type="text" id='exi_str'></p>
+            <p>Velocidade no eixo y (V): <input type="text" id='exj_str'></p></p>
+                <p><button type="button" onclick="EX33()">Resposta</button></p>
+                <p id="EX33">Resposta</p> 
+<!----------------------------------------------------------------------------------------------->  
+        <h2>Dinâmica</h2>
+            <p>Massa (m): <input type="text" id='a_str'></p>
+            <p>Aceleração (a): <input type="text" id='b_str'></p>
+            <p>Força (F): <input type="text" id='c_str'></p></p>
+                <p><button type="button" onclick="DN()">Resposta</button></p>
+                <p id="DN">Resposta</p>
+
+        <h2>Dinâmica - 2</h2>
+            <p>Massa (m): <input type="text" id='d_str'></p>
+            <p>Gravidade (g): <input type="text" id='e_str'></p>
+            <p>Peso (P): <input type="text" id='f_str'></p></p>
+                <p><button type="button" onclick="DNN()">Resposta</button></p>
+                <p id="DNN">Resposta</p>
+
+        <h2>Dinâmica - 3</h2>
+            <p>Coeficiente de atrito (µ): <input type="text" id='g_str'></p>
+            <p>Força normal (N):  <input type="text" id='h_str'></p>
+            <p>Força de atrito(F): <input type="text" id='i_str'></p></p>
+                <p><button type="button" onclick="DNNN()">Resposta</button></p>
+                <p id="DNNN">Resposta</p>
+
+        <h2>Dinâmica - 4</h2>
+            <p>Constante elástica (k): <input type="text" id='j_str'></p>
+            <p>Deformação (x): <input type="text" id='k_str'></p>
+            <p>Força elástica (F): <input type="text" id='l_str'></p></p>
+                <p><button type="button" onclick="DNNNN()">Resposta</button></p>
+                <p id="DNNNN">Resposta</p>
+<!----------------------------------------------------------------------------------------------->  
+        <h2>Trabalho, Energia e Potência</h2>
+            <p>Força (F): <input type="text" id='m_str'></p>
+            <p>Deslocamento (d): <input type="text" id='n_str'></p>
+            <p>Ângulo (θ): <input type="text" id='o_str'></p></p>
+            <p>Trabalho (T): <input type="text" id='p_str'></p></p>
+                <p><button type="button" onclick="TEP()">Resposta</button></p>
+                <p id="TEP">Resposta</p>
+
+        <h2>Trabalho, Energia e Potência - 2</h2>
+            <p>Massa (m): <input type="text" id='q_str'></p>
+            <p>Velocidade (v): <input type="text" id='r_str'></p>
+            <p>Energia cinética (E): <input type="text" id='s_str'></p></p>
+                <p><button type="button" onclick="TEPP()">Resposta</button></p>
+                <p id="TEPP">Resposta</p>
+
+        <h2>Trabalho, Energia e Potência - 3</h2>
+            <p>Massa (m): <input type="text" id='t_str'></p>
+            <p>Gravidade (g): <input type="text" id='u_str'></p>
+            <p>Algura (h): <input type="text" id='v_str'></p></p>
+            <p>Energia potencial (E): <input type="text" id='w_str'></p></p>
+                <p><button type="button" onclick="TEPPP()">Resposta</button></p>
+                <p id="TEPPP">Resposta</p>
+
+        <h2>Trabalho, Energia e Potência - 4</h2>
+            <p>Constante elástica (k): <input type="text" id='x_str'></p>
+            <p>Deformação (x): <input type="text" id='y_str'></p>
+            <p>Energia elástica (E): <input type="text" id='z_str'></p></p>
+                <p><button type="button" onclick="TEPPPP()">Resposta</button></p>
+                <p id="TEPPPP">Resposta</p>
+
+        <h2>Trabalho, Energia e Potência - 5</h2>
+            <p>Trabalho (T): <input type="text" id='A_str'></p>
+            <p>Intervalo de tempo (Δt): <input type="text" id='B_str'></p>
+            <p>Potência (P): <input type="text" id='C_str'></p></p>
+                <p><button type="button" onclick="TEPPPPP()">Resposta</button></p>
+                <p id="TEPPPPP">Resposta</p>
+<!----------------------------------------------------------------------------------------------->  
+        <h2>Hidrostática</h2>
+            <p>Força (F): <input type="text" id='D_str'></p>
+            <p>Área (A): <input type="text" id='E_str'></p>
+            <p>Pressão (p): <input type="text" id='F_str'></p></p>
+                <p><button type="button" onclick="HD()">Resposta</button></p>
+                <p id="HD">Resposta</p>
+
+        <h2>Hidrostática - 2</h2>
+            <p>Massa (m): <input type="text" id='G_str'></p>
+            <p>Volume (V): <input type="text" id='H_str'></p>
+            <p>Densidade (ρ): <input type="text" id='I_str'></p></p>
+                <p><button type="button" onclick="HDD()">Resposta</button></p>
+                <p id="HDD">Resposta</p>
+
+        <h2>Hidrostática - 3</h2>
+            <p>Pressão atmosférica (p): <input type="text" id='J_str'></p>
+            <p>Densidade (ρ): <input type="text" id='K_str'></p>
+            <p>Gravidade (g): <input type="text" id='L_str'></p>
+            <p>Altura (h): <input type="text" id='M_str'></p>
+            <p>Pressão Total (P): <input type="text" id='N_str'></p></p>
+                <p><button type="button" onclick="HDDD()">Resposta</button></p>
+                <p id="HDDD">Resposta</p>
+
+        <h2>Hidrostática - 4</h2>
+            <p>Densidade (ρ): <input type="text" id='O_str'></p>
+            <p>Gravidade (g): <input type="text" id='P_str'></p>
+            <p>Volume (V): <input type="text" id='Q_str'></p></p>
+            <p>Empuxo (E): <input type="text" id='R_str'></p></p>
+                <p><button type="button" onclick="HDDDD()">Resposta</button></p>
+                <p id="HDDDD">Resposta</p>
+<!-----------------------------------------------------------------------------------------------> 
+        <h2>Gravitação Universal</h2>
+            <p>Constante de proporcionalidade (K): <input type="text" id='S_str'></p>
+            <p>Raio (r): <input type="text" id='T_str'></p>
+            <p>Período (T): <input type="text" id='U_str'></p></p>
+                <p><button type="button" onclick="GU()">Resposta</button></p>
+                <p id="GU">Resposta</p>
+
+        <h2>Gravitação Universal - 2</h2>
+            <p>Constante de gravitação (G): <input type="text" id='V_str'></p>
+            <p>Massa do corpo 1 (m1): <input type="text" id='W_str'></p>
+            <p>Massa do corpo 2 (m2): <input type="text" id='X_str'></p>
+            <p>Distância (d): <input type="text" id='Y_str'></p>
+            <p>Força gravitacional (F): <input type="text" id='Z_str'></p></p>
+                <p><button type="button" onclick="GUU()">Resposta</button></p>
+                <p id="GUU">Resposta</p>
+<!-----------------------------------------------------------------------------------------------> 
+        <h2>Termologia e Termodinâmica</h2>
+            <p>Temperatura em Fahrenheit  (Tf): <input type="text" id='AB_str'></p>
+            <p>Temperatura em graus Celsius (Tc): <input type="text" id='BC_str'></p>
+                <p><button type="button" onclick="TT()">Resposta</button></p>
+                <p id="TT">Resposta</p>
+
+        <h2>Termologia e Termodinâmica - 2</h2>
+            <p>Temperatura em graus Celsius  (Tc): <input type="text" id='CD_str'></p>
+            <p>Temperatura em Kelvin (Tk): <input type="text" id='DE_str'></p>
+                <p><button type="button" onclick="TTT()">Resposta</button></p>
+                <p id="TTT">Resposta</p>
+
+        <h2>Termologia e Termodinâmica - 3</h2>
+            <p>Comprimento inicial (L): <input type="text" id='EF_str'></p>
+            <p>Coeficiente de dilatação linear (α): <input type="text" id='FG_str'></p>
+            <p>Variação de temperatura (∆T): <input type="text" id='GH_str'></p></p>
+            <p>Dilatação linear (∆L): <input type="text" id='HI_str'></p></p>
+                <p><button type="button" onclick="TTTT()">Resposta</button></p>
+                <p id="TTTT">Resposta</p>
+
+        <h2>Termologia e Termodinâmica - 4</h2>
+            <p>Área inicial (A): <input type="text" id='IJ_str'></p>
+            <p>Coeficiente de dilatação superficial (β): <input type="text" id='JK_str'></p>
+            <p>Variação de temperatura (∆T): <input type="text" id='KL_str'></p></p>
+            <p>Dilatação superficial (∆A): <input type="text" id='LM_str'></p></p>
+                <p><button type="button" onclick="TTTTT()">Resposta</button></p>
+                <p id="TTTTT">Resposta</p>
+
+        <h2>Termologia e Termodinâmica - 5</h2>
+            <p>Volume inicial (V): <input type="text" id='MN_str'></p>
+            <p>Coeficiente de dilatação volumétrico (ϒ): <input type="text" id='NO_str'></p>
+            <p>Variação de temperatura (∆T): <input type="text" id='OP_str'></p></p>
+            <p>Dilatação volumétrica (∆V): <input type="text" id='PQ_str'></p></p>
+                <p><button type="button" onclick="TTTTTT()">Resposta</button></p>
+                <p id="TTTTTT">Resposta</p>
+
+        <h2>Termologia e Termodinâmica - 6</h2>
+            <p>Massa (m): <input type="text" id='QR_str'></p>
+            <p>Calor específico (c): <input type="text" id='RS_str'></p>
+            <p>Capacidade térmica (C): <input type="text" id='ST_str'></p></p>
+                <p><button type="button" onclick="TTTTTTT()">Resposta</button></p>
+                <p id="TTTTTTT">Resposta</p>
+
+        <h2>Termologia e Termodinâmica - 7</h2>
+            <p>Massa (m): <input type="text" id='TU_str'></p>
+            <p>Calor específico (c): <input type="text" id='UV_str'></p>
+            <p>Variação de temperatura (∆T):  <input type="text" id='VW_str'></p>
+            <p>Quantidade de calor sensível (Q): <input type="text" id='WX_str'></p></p>
+                <p><button type="button" onclick="TTTTTTTT()">Resposta</button></p>
+                <p id="TTTTTTTT">Resposta</p>
+
+        <h2>Termologia e Termodinâmica - 8</h2>
+            <p>Massa (m): <input type="text" id='XY_str'></p>
+            <p>Calor latente - mudança de fase (L): <input type="text" id='YZ_str'></p>
+            <p>Quantidade de calor latente (Q): <input type="text" id='ZA_str'></p></p>
+                <p><button type="button" onclick="TTTTTTTTT()">Resposta</button></p>
+                <p id="TTTTTTTTT">Resposta</p>
+
+        <h2>Termologia e Termodinâmica - 9</h2>
+            <p>Quantidade de calor (Q): <input type="text" id='AA_str'></p>
+            <p>Trabalho (T): <input type="text" id='BB_str'></p>
+            <p>Variação de energia interna (∆U): <input type="text" id='CC_str'></p></p>
+                <p><button type="button" onclick="TTTTTTTTTT()">Resposta</button></p>
+                <p id="TTTTTTTTTT">Resposta</p>
+
+        <h2>Termologia e Termodinâmica - 10</h2>
+            <p>Quantidade de calor absorvida da fonte quente (Qq): <input type="text" id='DD_str'></p>
+            <p>Quantidade de calor cedida a fonte fria (Qf): <input type="text" id='EE_str'></p>
+            <p>Trabalho (T): <input type="text" id='FF_str'></p></p>
+                <p><button type="button" onclick="TTTTTTTTTTT()">Resposta</button></p>
+                <p id="TTTTTTTTTTT">Resposta</p>
+
+        <h2>Termologia e Termodinâmica - 11</h2>
+            <p>Trabalho (T): <input type="text" id='GG_str'></p>
+            <p>Quantidade de calor absorvida da fonte quente (Qq): <input type="text" id='HH_str'></p>
+            <p>Rendimento de uma máquina térmica (R): <input type="text" id='II_str'></p></p>
+                <p><button type="button" onclick="TTTTTTTTTTTT()">Resposta</button></p>
+                <p id="TTTTTTTTTTTT">Resposta</p>
+
+        <h2>Termologia e Termodinâmica - 12</h2>
+            <p>Variação de entropia (∆Q): <input type="text" id='JJ_str'></p>
+            <p>Quantidade de calor (T): <input type="text" id='KK_str'></p>
+            <p>Temperatura absoluta (∆S): <input type="text" id='LL_str'></p></p>
+                <p><button type="button" onclick="TTTTTTTTTTTTT()">Resposta</button></p>
+                <p id="TTTTTTTTTTTTT">Resposta</p>
+<!-----------------------------------------------------------------------------------------------> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Ondas e Ótica</h2>
+            <p>Comprimento de onda (ƛ): <input type="text" id='MM_str'></p> 
+            <p>Frequência (f): <input type="text" id='NN_str'></p>
+            <p>Velocidade de propagação de uma onda (v): <input type="text" id='OO_str'></p></p>
+                <p><button type="button" onclick="OD()">Resposta</button></p>
+                <p id="OD">Resposta</p>
+
+        <h2>Ondas e Ótica - 2</h2>
+            <p>Distância do vértice do espelho ao objeto (p): <input type="text" id='PP_str'></p>
+            <p>Distância do vértice do espelho a imagem (P): <input type="text" id='QQ_str'></p>
+            <p>Distância focal (f): <input type="text" id='RR_str'></p></p>
+                <p><button type="button" onclick="ODD()">Resposta</button></p>
+                <p id="ODD">Resposta</p>
+
+        <h2>Ondas e Ótica - 3</h2>
+            <p>Tamanho da imagem (i): <input type="text" id='SS_str'></p>
+            <p>Tamanho do objeto (o): <input type="text" id='TT_str'></p>
+            <p>Distância do vértice do espelho a imagem (P): <input type="text" id='UU_str'></p></p>
+            <p>Distância do vértice do espelho ao objeto (p): <input type="text" id='VV_str'></p></p>
+            <p>Aumento linear transversal (A): <input type="text" id='WW_str'></p></p>
+                <p><button type="button" onclick="ODDD()">Resposta</button></p>
+                <p id="ODDD">Resposta</p>
+
+
+
+
+
+
+
+
+
+                
