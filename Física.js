@@ -6,6 +6,9 @@ function w3_show_nav(name) {
     document.getElementById("menuHd").style.display = "none";
     document.getElementById("menuGU").style.display = "none";
     document.getElementById("menuTT").style.display = "none";
+    document.getElementById("menuOd").style.display = "none";
+    document.getElementById("menuEl").style.display = "none";
+    document.getElementById("menuEt").style.display = "none";
     document.getElementById(name).style.display = "block";
     w3-open();
   }
@@ -804,7 +807,7 @@ function EX3(exd_str, exe_str, exf_str) {
         return ' V = ' + Math.round(exd_str * Math.sin(exf_str * Math.PI / 180)) + ' , v = ' + exd_str + ' e θ = ' + exf_str
 }
 
-/*function EX33() {
+function EX33() {
     console.log('EX33');
     var exg_str = Number.parseFloat(document.getElementById('exg_str').value);
     var exh_str = Number.parseFloat(document.getElementById('exh_str').value);
@@ -828,7 +831,7 @@ function EX4(exg_str, exh_str, exi_str, exj_str) {
 }
 
 // Ondas e Ótica
-/*function OD() {
+function OD() {
     console.log('ODD');
     var MM_str = Number.parseFloat(document.getElementById('MM_str').value);
     var NN_str = Number.parseFloat(document.getElementById('NN_str').value);
@@ -847,51 +850,264 @@ function OD3(MM_str, NN_str, OO_str) {
     else if (!OO_str && MM_str && NN_str)
         return ' v = ' + Math.floor (MM_str * NN_str) + ' , ƛ = ' + MM_str + ' e f = ' + NN_str
 }
-/*
-function ODD() {
-    console.log('ODD');
+
+// Eletroestática
+function EL() {
+    console.log('EL');
     var PP_str = Number.parseFloat(document.getElementById('PP_str').value);
     var QQ_str = Number.parseFloat(document.getElementById('QQ_str').value);
     var RR_str = Number.parseFloat(document.getElementById('RR_str').value);
-    var resp = OD3(PP_str, QQ_str, RR_str);
-    console.log (resp);
-    document.getElementById('ODD').innerHTML = " " + resp;
-    }
-function OD3(PP_str, QQ_str, RR_str) {
-    if (PP_str && QQ_str && RR_str)
-        return ' p = ' + PP_str + ' , P = ' + QQ_str + ' e f = ' + RR_str
-    else if (!MM_str && NN_str && OO_str)
-        return ' p = ' + Math.floor () + ' , P = ' + NN_str + ' e f = ' + OO_str
-    else if (!NN_str && MM_str && OO_str)
-        return ' P = ' + Math.floor (OO_str / MM_str) + ' , p = ' + MM_str + ' e f = ' + OO_str
-    else if (!OO_str && MM_str && NN_str)
-        return ' f = ' + Math.floor (MM_str * NN_str) + ' , p = ' + MM_str + ' e P = ' + NN_str
-}
-*/
-/*
-function ODDD() {
-    console.log('ODD');
     var SS_str = Number.parseFloat(document.getElementById('SS_str').value);
     var TT_str = Number.parseFloat(document.getElementById('TT_str').value);
+    var resp = EL2(PP_str, QQ_str, RR_str, SS_str, TT_str);
+    console.log (resp);
+    document.getElementById('EL').innerHTML = " " + resp;
+    }
+function EL2(PP_str, QQ_str, RR_str, SS_str, TT_str) {
+    if (PP_str && QQ_str && RR_str && SS_str && TT_str)
+        return ' k = ' + PP_str + ' , Q1 = ' + QQ_str + ' , Q2 = ' + RR_str + ' , d = ' + SS_str + ' e F = ' + TT_str
+    else if (!PP_str && QQ_str && RR_str && SS_str && TT_str)
+        return ' k = ' + Math.floor ((TT_str * Math.pow(SS_str , 2)) / (QQ_str * RR_str)) + ' , Q1 = ' + QQ_str + ' e Q2 = ' + RR_str + ' , d = ' + SS_str + ' e F = ' + TT_str
+    else if (!QQ_str && PP_str && RR_str && SS_str && TT_str)
+        return ' Q1 = ' + Math.floor ((TT_str * Math.pow(SS_str , 2)) / (PP_str * RR_str)) + ' , k = ' + PP_str + ' e Q2 = ' + RR_str + ' , d = ' + SS_str + ' e F = ' + TT_str
+    else if (!RR_str && PP_str && QQ_str && SS_str && TT_str)
+        return ' Q2 = ' + Math.floor ((TT_str * Math.pow(SS_str , 2)) / (QQ_str * PP_str)) + ' , k = ' + PP_str + ' e Q1 = ' + QQ_str + ' , d = '  + SS_str + ' e F = ' + TT_str
+    else if (!SS_str && PP_str && QQ_str && RR_str && TT_str)
+        return ' d = ' + Math.floor (Math.sqrt((PP_str * QQ_str * RR_str) / TT_str)) + ' , k = ' + PP_str + ' e Q1 = ' + QQ_str + ' , Q2 = '  + RR_str + ' e F = ' + TT_str
+    else if (!TT_str && PP_str && QQ_str && RR_str && SS_str)
+        return ' F = ' + Math.floor ((PP_str * QQ_str * RR_str) / Math.pow(SS_str , 2)) + ' , k = ' + PP_str + ' e Q1 = ' + QQ_str + ' , Q2 = '  + RR_str + ' e d = ' + SS_str
+}
+
+function ELL() {
+    console.log('ELL');
     var UU_str = Number.parseFloat(document.getElementById('UU_str').value);
     var VV_str = Number.parseFloat(document.getElementById('VV_str').value);
     var WW_str = Number.parseFloat(document.getElementById('WW_str').value);
-    var resp = OD4(SS_str, TT_str, UU_str, VV_str, WW_str);
+    var resp = ELL2(UU_str, VV_str, WW_str);
     console.log (resp);
-    document.getElementById('ODDD').innerHTML = " " + resp;
+    document.getElementById('ELL').innerHTML = " " + resp;
     }
-function OD4(SS_str, TT_str, UU_str, VV_str, WW_str) {
-    if (SS_str && TT_str && UU_str && VV_str && WW_str)
-        return ' i = ' + PP_str + ' , o = ' + QQ_str + ' , P = ' + RR_str + ' , p = ' + QQ_str + ' e A = ' + QQ_str 
-    else if (!SS_str && TT_str && UU_str && VV_str && WW_str)
-        return ' p = ' + Math.floor () + ' , P = ' + NN_str + ' e f = ' + OO_str
-    else if (!TT_str && SS_str && UU_str && VV_str && WW_str)
-        return ' P = ' + Math.floor (OO_str / MM_str) + ' , p = ' + MM_str + ' e f = ' + OO_str
-    else if (!UU_str && SS_str && TT_str && VV_str && WW_str)
-        return ' f = ' + Math.floor (MM_str * NN_str) + ' , p = ' + MM_str + ' e P = ' + NN_str
-    else if (!VV_str && SS_str && TT_str && UU_str && WW_str)
-        return ' f = ' + Math.floor (MM_str * NN_str) + ' , p = ' + MM_str + ' e P = ' + NN_str
-    else if (!WW_str && SS_str && TT_str && UU_str && VV_str)
-        return ' f = ' + Math.floor (MM_str * NN_str) + ' , p = ' + MM_str + ' e P = ' + NN_str
+function ELL2(UU_str, VV_str, WW_str) {
+    if (UU_str && VV_str && WW_str)
+        return ' q = ' + UU_str + ' , E = ' + VV_str + ' e F = ' + WW_str
+    else if (!UU_str && VV_str && WW_str)
+        return ' q = ' + Math.floor (WW_str / VV_str) + ' , E = ' + VV_str + ' e F = ' + WW_str
+    else if (!VV_str && UU_str && WW_str)
+        return ' E = ' + Math.floor (WW_str / UU_str) + ' , q = ' + UU_str + ' e F = ' + WW_str
+    else if (!WW_str && UU_str && VV_str)
+        return ' F = ' + Math.floor (UU_str * VV_str) + ' , q = ' + UU_str + ' e E = ' + VV_str
 }
-*/
+
+function ELLL() {
+    console.log('ELL');
+    var XX_str = Number.parseFloat(document.getElementById('XX_str').value);
+    var YY_str = Number.parseFloat(document.getElementById('YY_str').value);
+    var ZZ_str = Number.parseFloat(document.getElementById('ZZ_str').value);
+    var ABC_str = Number.parseFloat(document.getElementById('ABC_str').value);
+    var resp = ELLL2(XX_str, YY_str, ZZ_str, ABC_str);
+    console.log (resp);
+    document.getElementById('ELLL').innerHTML = " " + resp;
+    }
+function ELLL2(XX_str, YY_str, ZZ_str, ABC_str) {
+    if (XX_str && YY_str && ZZ_str && ABC_str)
+        return ' k = ' + XX_str + ' , Q = ' + YY_str + ' e d = ' + ZZ_str + ' e V = ' + ABC_str
+    else if (!XX_str && YY_str && ZZ_str && ABC_str)
+        return ' k = ' + Math.floor ((ABC_str * ZZ_str) / YY_str) + ' , Q = ' + YY_str + ' , d = ' + ZZ_str + ' e V = ' + ABC_str
+    else if (!YY_str && XX_str && ZZ_str && ABC_str)
+        return ' Q = ' + Math.floor ((ABC_str * ZZ_str) / XX_str) + ' , k = ' + XX_str + ' , d = ' + ZZ_str + ' e V = ' + ABC_str
+    else if (!ZZ_str && XX_str && YY_str && ABC_str)
+        return ' d = ' + Math.floor ((XX_str * YY_str) / ABC_str) + ' , k = ' + XX_str + ' , Q = ' + YY_str + ' e V = ' + ABC_str
+    else if (!ABC_str && XX_str && YY_str && ZZ_str)
+        return ' V = ' + Math.floor ((XX_str * YY_str) / ZZ_str) + ' , k = ' + XX_str + ' , Q = ' + YY_str + ' e E = ' + ZZ_str
+}
+
+function ELLLL() {
+    console.log('ELLLL');
+    var BCD_str = Number.parseFloat(document.getElementById('BCD_str').value);
+    var CDE_str = Number.parseFloat(document.getElementById('CDE_str').value);
+    var DEF_str = Number.parseFloat(document.getElementById('DEF_str').value);
+    var resp = ELLLL2(BCD_str, CDE_str, DEF_str);
+    console.log (resp);
+    document.getElementById('ELLLL').innerHTML = " " + resp;
+    }
+function ELLLL2(BCD_str, CDE_str, DEF_str) {
+    if (BCD_str && CDE_str && DEF_str)
+        return ' R = ' + BCD_str + ' , i = ' + CDE_str + ' e U = ' + DEF_str
+    else if (!BCD_str && CDE_str && DEF_str)
+        return ' R = ' + Math.floor (DEF_str / CDE_str) + ' , i = ' + CDE_str + ' e U = ' + DEF_str
+    else if (!CDE_str && BCD_str && DEF_str)
+        return ' i = ' + Math.floor (DEF_str / BCD_str) + ' , R = ' + BCD_str + ' e U = ' + DEF_str
+    else if (!DEF_str && BCD_str && CDE_str)
+        return ' U = ' + Math.floor (BCD_str * CDE_str) + ' , R = ' + BCD_str + ' e i = ' + CDE_str
+}
+
+function ELLLLL() {
+    console.log('ELLLLL');
+    var EFG_str = Number.parseFloat(document.getElementById('EFG_str').value);
+    var FGH_str = Number.parseFloat(document.getElementById('FGH_str').value);
+    var GHI_str = Number.parseFloat(document.getElementById('GHI_str').value);
+    var resp = ELLLLL2(EFG_str, FGH_str, GHI_str);
+    console.log (resp);
+    document.getElementById('ELLLLL').innerHTML = " " + resp;
+    }
+function ELLLLL2(EFG_str, FGH_str, GHI_str) {
+    if (EFG_str && FGH_str && GHI_str)
+        return ' U = ' + EFG_str + ' , i = ' + FGH_str + ' e P = ' + GHI_str
+    else if (!EFG_str && FGH_str && GHI_str)
+        return ' U = ' + Math.floor (GHI_str / FGH_str) + ' , i = ' + FGH_str + ' e P = ' + GHI_str
+    else if (!FGH_str && EFG_str && GHI_str)
+        return ' i = ' + Math.floor (GHI_str / EFG_str) + ' , U = ' + EFG_str + ' e P = ' + GHI_str
+    else if (!GHI_str && EFG_str && FGH_str)
+        return ' P = ' + Math.floor (EFG_str * FGH_str) + ' , U = ' + EFG_str + ' e i = ' + FGH_str
+}
+
+function ELLLLLL() {
+    console.log('ELLLLLL');
+    var HIJ_str = Number.parseFloat(document.getElementById('HIJ_str').value);
+    var IJK_str = Number.parseFloat(document.getElementById('IJK_str').value);
+    var JKL_str = Number.parseFloat(document.getElementById('JKL_str').value);
+    var resp = ELLLLLL2(HIJ_str, IJK_str, JKL_str);
+    console.log (resp);
+    document.getElementById('ELLLLLL').innerHTML = " " + resp;
+    }
+function ELLLLLL2(HIJ_str, IJK_str, JKL_str) {
+    if (HIJ_str && IJK_str && JKL_str)
+        return ' R = ' + HIJ_str + ' , i = ' + IJK_str + ' e P = ' + JKL_str
+    else if (!HIJ_str && IJK_str && JKL_str)
+        return ' R = ' + Math.floor (JKL_str / Math.pow(IJK_str , 2)) + ' , i = ' + IJK_str + ' e P = ' + JKL_str
+    else if (!IJK_str && HIJ_str && JKL_str)
+        return ' i = ' + Math.floor (Math.sqrt(JKL_str / HIJ_str)) + ' , R = ' + HIJ_str + ' e P = ' + JKL_str
+    else if (!JKL_str && HIJ_str && IJK_str)
+        return ' P = ' + Math.floor (HIJ_str * Math.pow(IJK_str , 2)) + ' , R = ' + HIJ_str + ' e i = ' + IJK_str
+}
+
+function ELLLLLLI() {
+    console.log('ELLLLLLI');
+    var ABB_str = Number.parseFloat(document.getElementById('ABB_str').value);
+    var BBA_str = Number.parseFloat(document.getElementById('BBA_str').value);
+    var BAB_str = Number.parseFloat(document.getElementById('BAB_str').value);
+    var resp = ELLLLLLI2(ABB_str, BBA_str, BAB_str);
+    console.log (resp);
+    document.getElementById('ELLLLLLI').innerHTML = " " + resp;
+    }
+function ELLLLLLI2(ABB_str, BBA_str, BAB_str) {
+    if (ABB_str && BBA_str && BAB_str)
+        return ' ∆t = ' + ABB_str + ' , P = ' + BBA_str + ' e E = ' + BAB_str
+    else if (!ABB_str && BBA_str && BAB_str)
+        return ' ∆t = ' + Math.floor (BAB_str / BBA_str) + ' , P = ' + BBA_str + ' e E = ' + BAB_str
+    else if (!BBA_str && ABB_str && BAB_str)
+        return ' P = ' + Math.floor (BAB_str / ABB_str) + ' , ∆t = ' + ABB_str + ' e E = ' + BAB_str
+    else if (!BAB_str && ABB_str && BBA_str)
+        return ' E = ' + Math.floor (ABB_str * BBA_str) + ' , ∆t = ' + ABB_str + ' e P = ' + BBA_str
+}
+
+function ELLLLLLL() {
+    console.log('ELLLLLLL');
+    var KLM_str = Number.parseFloat(document.getElementById('KLM_str').value);
+    var LMN_str = Number.parseFloat(document.getElementById('LMN_str').value);
+    var MNO_str = Number.parseFloat(document.getElementById('MNO_str').value);
+    var resp = ELLLLLLL2(KLM_str, LMN_str, MNO_str);
+    console.log (resp);
+    document.getElementById('ELLLLLLL').innerHTML = " " + resp;
+    }
+function ELLLLLLL2(KLM_str, LMN_str, MNO_str) {
+    if (KLM_str && LMN_str && MNO_str)
+        return ' Q = ' + KLM_str + ' , U = ' + LMN_str + ' e C = ' + MNO_str
+    else if (!KLM_str && LMN_str && MNO_str)
+        return ' Q = ' + Math.floor (MNO_str * LMN_str) + ' , U = ' + LMN_str + ' e C = ' + MNO_str
+    else if (!LMN_str && KLM_str && MNO_str)
+        return ' U = ' + Math.floor (KLM_str / MNO_str) + ' , Q = ' + KLM_str + ' e C = ' + MNO_str
+    else if (!MNO_str && KLM_str && LMN_str)
+        return ' C = ' + Math.floor (KLM_str / LMN_str) + ' , Q = ' + KLM_str + ' e U = ' + LMN_str
+}
+
+// Eletromagnetismo
+function ELLLLLLLL() {
+    console.log('ELLLLLLLL');
+    var NOP_str = Number.parseFloat(document.getElementById('NOP_str').value);
+    var OPQ_str = Number.parseFloat(document.getElementById('OPQ_str').value);
+    var PQR_str = Number.parseFloat(document.getElementById('PQR_str').value);
+    var QRS_str = Number.parseFloat(document.getElementById('QRS_str').value);
+    var RST_str = Number.parseFloat(document.getElementById('RST_str').value);
+    var resp = ELLLLLLLL2(NOP_str, OPQ_str, PQR_str, QRS_str, RST_str);
+    console.log (resp);
+    document.getElementById('ELLLLLLLL').innerHTML = " " + resp;
+    }
+function ELLLLLLLL2(NOP_str, OPQ_str, PQR_str, QRS_str, RST_str) {
+    if (NOP_str && OPQ_str && PQR_str && QRS_str && RST_str)
+        return ' B = ' + NOP_str + ' , q = ' + OPQ_str + ' , v = ' + PQR_str + ' , θ = ' + QRS_str + ' e F = ' + RST_str
+    else if (!NOP_str && OPQ_str && PQR_str && QRS_str && RST_str)
+        return ' B = ' + Math.round (RST_str / (OPQ_str * PQR_str * Math.sin(QRS_str * Math.PI / 180))) + ' , q = ' + OPQ_str + ' , v = ' + PQR_str + ' , θ = ' + QRS_str + ' e F = ' + RST_str
+    else if (!OPQ_str && NOP_str && PQR_str && QRS_str && RST_str)
+        return ' q = ' + Math.round (RST_str / (NOP_str * PQR_str * Math.sin(QRS_str * Math.PI / 180))) + ' , B = ' + NOP_str + ' , v = ' + PQR_str + ' , θ = ' + QRS_str + ' e F = ' + RST_str
+    else if (!PQR_str && NOP_str && OPQ_str && QRS_str && RST_str)
+        return ' v = ' + Math.round (RST_str / (OPQ_str * NOP_str * Math.sin(QRS_str * Math.PI / 180))) + ' , B = ' + NOP_str + ' , q = ' + OPQ_str + ' , θ = ' + QRS_str + ' e F = ' + RST_str
+    else if (!RST_str && NOP_str && OPQ_str && PQR_str && QRS_str)
+        return ' F = ' + Math.round (NOP_str * OPQ_str * PQR_str * Math.sin(QRS_str * Math.PI / 180)) + ' , B = ' + NOP_str + ' , q = ' + OPQ_str + ' , v = ' + PQR_str + ' e θ = ' + QRS_str
+}
+
+function ELLLLLLLLL() {
+    console.log('ELLLLLLLLL');
+    var STU_str = Number.parseFloat(document.getElementById('STU_str').value);
+    var TUV_str = Number.parseFloat(document.getElementById('TUV_str').value);
+    var UVW_str = Number.parseFloat(document.getElementById('UVW_str').value);
+    var VWX_str = Number.parseFloat(document.getElementById('VWX_str').value);
+    var WXY_str = Number.parseFloat(document.getElementById('WXY_str').value);
+    var resp = ELLLLLLLLL2(STU_str, TUV_str, UVW_str, VWX_str, WXY_str);
+    console.log (resp);
+    document.getElementById('ELLLLLLLLL').innerHTML = " " + resp;
+    }
+function ELLLLLLLLL2(STU_str, TUV_str, UVW_str, VWX_str, WXY_str) {
+    if (STU_str && TUV_str && UVW_str && VWX_str && WXY_str)
+        return ' B = ' + STU_str + ' , i = ' + TUV_str + ' , l = ' + UVW_str + ' , θ = ' + VWX_str + ' e F = ' + WXY_str
+    else if (!STU_str && TUV_str && UVW_str && VWX_str && WXY_str)
+        return ' B = ' + Math.round (WXY_str / (TUV_str * UVW_str * Math.sin(VWX_str * Math.PI / 180))) + ' , i = ' + TUV_str + ' , l = ' + UVW_str + ' , θ = ' + VWX_str + ' e F = ' + WXY_str
+    else if (!TUV_str && STU_str && UVW_str && VWX_str && WXY_str)
+        return ' i = ' + Math.round (WXY_str / (STU_str * UVW_str * Math.sin(VWX_str * Math.PI / 180))) + ' , B = ' + STU_str + ' , l = ' + UVW_str + ' , θ = ' + VWX_str + ' e F = ' + WXY_str
+    else if (!UVW_str && STU_str && TUV_str && VWX_str && WXY_str)
+        return ' l = ' + Math.round (WXY_str / (TUV_str * STU_str * Math.sin(VWX_str * Math.PI / 180))) + ' , B = ' + STU_str + ' , i = ' + TUV_str + ' , θ = ' + VWX_str + ' e F = ' + WXY_str
+    else if (!WXY_str && STU_str && TUV_str && UVW_str && VWX_str)
+        return ' F = ' + Math.round (STU_str * TUV_str * UVW_str * Math.sin(VWX_str * Math.PI / 180)) + ' , B = ' + STU_str + ' , i = ' + TUV_str + ' , l = ' + UVW_str + ' e θ = ' + VWX_str
+}
+
+function ELLLLLLLLLL() {
+    console.log('ELLLLLLLLLL');
+    var XYZ_str = Number.parseFloat(document.getElementById('XYZ_str').value);
+    var AAA_str = Number.parseFloat(document.getElementById('AAA_str').value);
+    var BBB_str = Number.parseFloat(document.getElementById('BBB_str').value);
+    var CCC_str = Number.parseFloat(document.getElementById('CCC_str').value);
+    var resp = ELLLLLLLLLL2(XYZ_str, AAA_str, BBB_str, CCC_str);
+    console.log (resp);
+    document.getElementById('ELLLLLLLLLL').innerHTML = " " + resp;
+    }
+function ELLLLLLLLLL2(XYZ_str, AAA_str, BBB_str, CCC_str) {
+    if (XYZ_str && AAA_str && BBB_str && CCC_str)
+        return ' B = ' + XYZ_str + ' , A = ' + AAA_str + ' , θ = ' + BBB_str + ' e φ = ' + CCC_str
+    else if (!XYZ_str && AAA_str && BBB_str && CCC_str)
+        return ' B = ' + Math.round (CCC_str / (AAA_str * Math.cos(BBB_str * Math.PI / 180))) + ' , A = ' + AAA_str + ' , θ = ' + BBB_str + ' e φ = ' + CCC_str
+    else if (!AAA_str && XYZ_str && BBB_str && CCC_str)
+        return ' A = ' + Math.round (CCC_str / (XYZ_str * Math.cos(BBB_str * Math.PI / 180))) + ' , B = ' + XYZ_str + ' , θ = ' + BBB_str + ' e φ = ' + CCC_str
+    else if (!CCC_str && XYZ_str && AAA_str && BBB_str)
+        return ' φ = ' + Math.round (XYZ_str * (AAA_str * Math.cos(BBB_str * Math.PI / 180))) + ' , B = ' + XYZ_str + ' , A = ' + AAA_str + ' e θ = ' + BBB_str
+}
+
+function ELLLLLLLLLLL() {
+    console.log('ELLLLLLLLLLL');
+    var DDD_str = Number.parseFloat(document.getElementById('DDD_str').value);
+    var EEE_str = Number.parseFloat(document.getElementById('EEE_str').value);
+    var FFF_str = Number.parseFloat(document.getElementById('FFF_str').value);
+    var resp = ELLLLLLLLLLL2(DDD_str, EEE_str, FFF_str);
+    console.log (resp);
+    document.getElementById('ELLLLLLLLLLL').innerHTML = " " + resp;
+    }
+function ELLLLLLLLLLL2(DDD_str, EEE_str, FFF_str) { 
+    if (DDD_str && EEE_str && FFF_str)
+        return ' ∆φ = ' + DDD_str + ' , ∆t = ' + EEE_str + ' e ε = ' + FFF_str
+    else if (!DDD_str && EEE_str && FFF_str)
+        return ' ∆φ = ' + Math.floor (FFF_str * EEE_str) + ' , ∆t = ' + EEE_str + ' e ε = ' + FFF_str
+    else if (!EEE_str && DDD_str && FFF_str)
+        return ' ∆t = ' + Math.floor (DDD_str / FFF_str) + ' , ∆φ = ' + DDD_str + ' e ε = ' + FFF_str
+    else if (!FFF_str && DDD_str && EEE_str)
+        return ' ε = ' + Math.floor (DDD_str / EEE_str) + ' , ∆φ = ' + DDD_str + ' e ∆t = ' + EEE_str
+}
+
